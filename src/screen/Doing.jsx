@@ -1,5 +1,4 @@
 import DisplayFormMemo from "./DisplayForm";
-import { handleDisplayDoing } from "../tasksSlice";
 
 const Doing = () => {
 
@@ -7,7 +6,7 @@ const Doing = () => {
         <>
             <DisplayFormMemo
                 key={3}
-                renderAction={handleDisplayDoing()}
+                renderAction='DOING'
             />
         </>
     );

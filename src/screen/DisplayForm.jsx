@@ -3,6 +3,7 @@ import CardHome from "./CardHome";
 import { useSearchParams } from "react-router-dom";
 import Pagination from 'react-bootstrap/Pagination';
 import { useDispatch, useSelector } from "react-redux";
+import { handleDisplayAll, handleDisplayNew, handleDisplayDoing, handleDisplayDone } from '../tasksSlice';
 
 const DisplayForm = ({ renderAction }) => {
     let [getSearchParams, setGetSearchParams] = useSearchParams();
@@ -12,7 +13,21 @@ const DisplayForm = ({ renderAction }) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(renderAction);
+        switch (renderAction) {
+            case 'ALL':
+                dispatch(handleDisplayAll());
+                break;
+            case 'NEW':
+                dispatch(handleDisplayNew());
+                break;
+            case 'DOING':
+                dispatch(handleDisplayDoing());
+                break;
+            case 'DONE':
+                dispatch(handleDisplayDone());
+                break;
+        }
+        // dispatch(renderAction);
         setGetSearchParams({ page: 1 });
     }, []);
 

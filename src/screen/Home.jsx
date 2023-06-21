@@ -1,5 +1,4 @@
 import DisplayFormMemo from "./DisplayForm";
-import { handleDisplayAll } from "../tasksSlice";
 
 const Home = () => {
 
@@ -7,7 +6,7 @@ const Home = () => {
         <>
             <DisplayFormMemo
                 key={1}
-                renderAction={handleDisplayAll()}
+                renderAction='ALL'
             />
         </>
     );
