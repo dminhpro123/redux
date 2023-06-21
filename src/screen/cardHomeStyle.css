@@ -1,0 +1,24 @@
+.cardHome {
+    width: 200px;
+    height: 200px;
+
+    padding: 5px;
+    margin: 10px;
+
+    border: 1px solid blue;
+    border-radius: 0.3rem;
+
+    text-align: left;
+}
+
+.statusNew>span {
+    color: green;
+}
+
+.statusDoing {
+    color: orange;
+}
+
+.statusDone {
+    color: blue;
+}
