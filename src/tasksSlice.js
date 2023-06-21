@@ -17,7 +17,7 @@ const tasksSlice = createSlice({
                 discription: action.payload.discription,
             });
         },
-        handleDisplayAll(state) {
+        handleDisplayAll: (state) => {
             state.fillterTasks = [...state.items];
         },
         handleDisplayNew(state) {
